@@ -72,6 +72,15 @@ form input{
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
+#passkey{
+    outline: none;
+    border:1px solid #1ebea5;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
 .submitButton{
     color: #1ebea5;
     border-radius: 23px;
@@ -165,7 +174,7 @@ ul li{
 .messageArea{
     display: inline-block;
     width: 98%;
-    height: 87%;
+    min-height: 87%;
     background: white;
     border: 1px solid #1ebea5;
     border-radius: 30px;

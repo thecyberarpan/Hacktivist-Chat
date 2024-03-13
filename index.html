@@ -9,58 +9,52 @@
 </head>
 
 <body>
-     <header>
+    <header>
         <div class="logo">
             <img src="img/logo.png" alt="logo" height="35" width="35">
         </div>
         <div class="headerText">Hacktivist Chat</div>
-     </header>
+    </header>
     <div class="container">
-     
         <div id="loginForm">
-            <h2>Enter User Name</h2>
+            <h2>Enter User Name and Passkey</h2>
             <div class="form">
-                 <form>
-                    <input id ="username" type="text" placeholder="username" autocomplete="off">
-                     <span id="warningMessage"></span>
-                     <input id="submitButton" class="submitButton" type="submit" value="Login">
+                <form>
+                    <input id="username" type="text" placeholder="Username" autocomplete="off"><br>
+                    <input id="passkey" type="password" placeholder="Passkey" autocomplete="off"><br>
+                    <span id="warningMessage"></span><br>
+                    <input id="submitButton" class="submitButton" type="submit" value="Login">
                 </form>
             </div>
         </div>
-     
-        <div id="chatRoom">
-            
+
+        <div id="chatRoom" style="display: none;">
             <div class="onlineUsers">
-            <div class="userList">
-               <h2>Online Users:</h2>
-               <div>
-                   <ul id="list">
-                       <li></li>
-                    
-                   </ul>
-               </div>
-           </div>
-        </div>
-           
-        <div class="messageBox">
-            <div class="messageArea">
-                <ul id="messageList">
-                </ul>
+                <div class="userList">
+                    <h2>Online Users:</h2>
+                    <div>
+                        <ul id="list">
+                            <!-- User list will be populated dynamically -->
+                        </ul>
+                    </div>
+                </div>
             </div>
-          <div class="messageInput">
-             <input type="text" placeholder="Type a message" id="chatInput" /> 
-             <button type="submit" class="submitButton" id="send">Send</button>
-            </div> 
+            <div class="messageBox">
+                <div class="messageArea">
+                    <ul id="messageList">
+                        <!-- Chat messages will be displayed here -->
+                    </ul>
+                </div>
+                <div class="messageInput">
+                    <input type="text" placeholder="Type a message" id="chatInput" />
+                    <button type="submit" class="submitButton" id="send">Send</button>
+                </div>
+            </div>
         </div>
-             
-        </div>
-    
     </div>
-
-     <script type="text/javascript" src="./js/script.js"></script>
-     <script  type="text/javascript">
-        //  var socket = io(); // connecting to the server
-     </script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript">
+        // var socket = io(); // connecting to the server
+    </script>
 </body>
-
 </html>
