@@ -1,30 +1,44 @@
-*{
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
     padding: 0;
-    border: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-html, body{
-    height: 100;
+html,
+body {
+    height: 100%;
     width: 100%;
 }
-.container{
+
+.container {
     width: 100%;
     height: 83vh;
+    position: relative;
 }
-body{
+
+body {
     color: whitesmoke;
-    
-}
-header{
-    background-color:#1ebea5;
-}
-.headerText{
-    font-size: 30px;
-    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 }
-.logo{
+
+header {
+    background-color: #1ebea5;
+    width: 100%;
+}
+
+.headerText {
+    font-size: 30px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: inline-block;
+    position: absolute;
+    top: 2%;
+    left: 7%;
+}
+
+.logo {
     height: 35px;
     border-radius: 50%;
     margin: 5px 15px;
@@ -33,55 +47,55 @@ header{
     padding: 5px;
     display: inline-block;
 }
-.headerText{
-    display: inline-block;
+
+#loginForm {
     position: absolute;
-    top: 2%;
-    left: 7%;
-}
-#loginForm{
-    margin: 0 auto;
-    top: 30%;
-    position: absolute;
-    left: 38%;
+    top: 50%;
+    left: 50%;
     width: 362px;
+    /* max-width: 90%; adjust the form size */
+    transform: translate(-50%, -50%);
     border: 1px solid #1ebea5;
     border-radius: 15px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
-h2{
+
+#loginForm h2 {
     text-align: center;
     color: #1ebea5;
     padding: 15px;
+    font-size: 22px;
 }
 
-form input{
+form input {
     display: block;
     margin: 0 auto;
     padding: 10px;
     margin-bottom: 30px;
 }
 
-#username{
+#username {
     outline: none;
-    border:1px solid #1ebea5;
+    border: 1px solid #1ebea5;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
-#passkey{
+
+#passkey {
     outline: none;
-    border:1px solid #1ebea5;
+    border: 1px solid #1ebea5;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
-.submitButton{
+
+.submitButton {
     color: #1ebea5;
     border-radius: 23px;
     font-size: 22px;
@@ -97,36 +111,37 @@ form input{
     -ms-border-radius: 23px;
     -o-border-radius: 23px;
 }
-.submitButton:hover{
+
+.submitButton:hover {
     background-color: #1ebea5;
     color: white;
 }
-#chatRoom{
+
+#chatRoom {
     display: none;
     width: 100%;
     height: 106%;
 }
 
-input[type=text]
-{
-  padding: 12px 20px;
-   
-  box-sizing: border-box;
-} 
+input[type=text] {
+    padding: 12px 20px;
 
-.onlineUsers{
+    box-sizing: border-box;
+}
+
+.onlineUsers {
     width: 20%;
     float: left;
     height: 100%;
 }
 
-.messageBox{
+.messageBox {
     display: inline-block;
     width: 80%;
     height: 100%;
 }
 
-.userList{
+.userList {
     border: 2px solid #1ebea5;
     border-radius: 16px;
     height: 96%;
@@ -139,15 +154,18 @@ input[type=text]
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
 }
-.userList h2{
+
+.userList h2 {
     color: rgb(37, 35, 35);
-}
-.userList ul li{
-    font-size: 25px;
-     
+    font-size: 24px;
 }
 
-ul li{
+.userList ul li {
+    font-size: 25px;
+
+}
+
+ul li {
     padding: 8px;
     list-style-type: none;
 }
@@ -155,25 +173,29 @@ ul li{
 
 ::-webkit-scrollbar {
     width: 7px;
-  }
-    ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-    ::-webkit-scrollbar-thumb {
-      background: #1ebea5;
-      border-radius:10px;
-      -webkit-border-radius:10px;
-      -moz-border-radius:10px;
-      -ms-border-radius:10px;
-      -o-border-radius:10px;
 }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }  
 
-.messageArea{
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1ebea5;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.messageArea {
     display: inline-block;
-    width: 98%;
+    min-width: 98%;
+    max-width: 98%;
     min-height: 87%;
     background: white;
     border: 1px solid #1ebea5;
@@ -185,7 +207,7 @@ ul li{
     -o-border-radius: 30px;
 }
 
-.messageInput{
+.messageInput {
     display: inline-block;
     width: 98%;
     margin: 0px 0px 5px 10px;
@@ -196,7 +218,7 @@ ul li{
     height: 8%;
 }
 
-.messageInput input{
+.messageInput input {
     margin-left: 15px;
     border: none;
     border: 1px solid #1ebea5;
@@ -212,20 +234,22 @@ ul li{
     -o-border-radius: 26px;
 }
 
-#warningMessage{
+#warningMessage {
     color: red;
     font-size: 12px;
     position: absolute;
     left: 83px;
     top: 100px;
-     display: none;
+    display: none;
 }
 
-#messageList{
+#messageList {
     padding: 10px;
     max-width: inherit;
+
 }
-#messageList li{
+
+#messageList li {
     position: relative;
     margin: 5px;
     color: #555;
@@ -235,15 +259,45 @@ ul li{
     border-radius: 30px;
     font-size: 19px;
     background: rgb(195 255 227);
+    max-width: 95%;
+    /* background-color: red; */
+    word-wrap: break-word;
+    /* Added to prevent overflow */
+
 }
 
-#messageList div li:nth-child(2n){
+#messageList div li:nth-child(2n) {
     background-color: rgb(75 243 164);
 }
 
-#messageList li span{
-  font-size: 13px;
-  font-weight: bold;
-  padding: 23px 5px 5px 5px;
-  margin-left: 50px;
+#messageList li span {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 23px 5px 5px 5px;
+    margin-left: 50px;
+    max-width: 95%;
+}
+
+
+
+@media (max-width: 768px) {
+    .headerText {
+        display: none;
+    }
+
+    #loginForm {
+        width: 80%;
+        /* Adjust the width for smaller screens */
+        max-width: none;
+        /* Reset maximum width */
+    }
+
+    #loginForm h2 {
+        font-size: 14px;
+    }
+
+
+    .userList h2 {
+        font-size: 14px;
+    }
 }

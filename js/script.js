@@ -111,7 +111,11 @@ const userCredentials = {
     "user2": "passkey2",
     "user3": "passkey3",
     "user4": "passkey4",
-    "user5": "passkey5"
+    "user5": "passkey5",
+    'arpan':'arpan',
+    'dk':'dk',
+    'kdo':'kdo',
+    '1': '1',
 };
 
 // Modify login function to check user credentials
